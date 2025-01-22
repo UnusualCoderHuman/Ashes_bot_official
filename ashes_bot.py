@@ -42,6 +42,8 @@ def daily_tweet():
         print(f"Tweeted successfully!")
     except Exception as e:
         print(f"Error while tweeting: {e}")
+        print(API_KEY)
+        print(API_SECRET_KEY)
 
 if __name__ == "__main__":
     try:
