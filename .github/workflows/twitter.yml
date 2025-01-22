@@ -2,7 +2,7 @@ name: Daily Tweet Scheduler Public
 
 on:
   schedule:
-    - cron: '40 11 * * *'  # To make it run daily at 11:40 PM UTC
+    - cron: '00 11 * * *'  # To make it run daily at 11:40 PM UTC
   workflow_dispatch:
 
 jobs:
