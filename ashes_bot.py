@@ -34,7 +34,9 @@ def daily_tweet():
             text=(
                 f"{days_elapsed_since_winning} days since England last regained the Ashes.\n"
                 f"{days_elapsed_since_holding} days since they held it.\n"
-                f"This was tweeted at {timestamp}."
+                f"This was tweeted at {timestamp}.\n"
+                f"This was tweeted from the public account."
+                
             )
         )
         print(f"Tweeted successfully!")
