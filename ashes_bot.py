@@ -9,6 +9,13 @@ ACCESS_TOKEN = os.getenv('ACCESS_TOKEN')
 ACCESS_TOKEN_SECRET = os.getenv('ACCESS_TOKEN_SECRET')
 BEARER_TOKEN = os.getenv('BEARER_TOKEN')
 
+# Print the values of the secrets to check if they are read correctly
+print("API_KEY:", API_KEY)
+print("API_SECRET_KEY:", API_SECRET_KEY)
+print("ACCESS_TOKEN:", ACCESS_TOKEN)
+print("ACCESS_TOKEN_SECRET:", ACCESS_TOKEN_SECRET)
+print("BEARER_TOKEN:", BEARER_TOKEN)
+
 # Authenticate with the Twitter API
 client = tweepy.Client(
     bearer_token=BEARER_TOKEN,
