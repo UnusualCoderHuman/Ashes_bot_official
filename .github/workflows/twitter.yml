@@ -1,0 +1,29 @@
+name: Daily Tweet Scheduler Public
+
+on:
+  schedule:
+    - cron: '00 12 * * *'  # To make it run daily at 12 PM UTC
+  workflow_dispatch:
+
+jobs:
+  tweet:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v2  # Checkout the code
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt  # Install dependencies from requirements.txt
+      - name: Run the Python script
+        run: |
+          python ashes_bot.py  # Run the Python script
+        env:
+          BEARER_TOKEN: ${{ secrets.BEARER_TOKEN }}
+          API_KEY: ${{ secrets.API_KEY }}
+          API_SECRET_KEY: ${{ secrets.API_SECRET_KEY }}
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
