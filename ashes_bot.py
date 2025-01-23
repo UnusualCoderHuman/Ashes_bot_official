@@ -21,8 +21,8 @@ client = tweepy.Client(
 )
 
 # Dates to calculate elapsed days
-last_day_england_won_ashes = date(2015, 9, 19)  # Example date
-last_day_england_held_ashes = date(2017, 12, 18)  # Example date
+last_day_england_won_ashes = date(2015, 8, 8)  
+last_day_england_held_ashes = date(2017, 12, 18)  
 
 def daily_tweet():
     today = date.today()
