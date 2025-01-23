@@ -9,12 +9,7 @@ ACCESS_TOKEN = os.getenv('ACCESS_TOKEN')
 ACCESS_TOKEN_SECRET = os.getenv('ACCESS_TOKEN_SECRET')
 BEARER_TOKEN = os.getenv('BEARER_TOKEN')
 
-# Print the values of the secrets to check if they are read correctly
-print("API_KEY:", str(API_KEY))
-print("API_SECRET_KEY:", str(API_SECRET_KEY))
-print("ACCESS_TOKEN:", str(ACCESS_TOKEN))
-print("ACCESS_TOKEN_SECRET:", str(ACCESS_TOKEN_SECRET))
-print("BEARER_TOKEN:", str(BEARER_TOKEN))
+
 
 # Authenticate with the Twitter API
 client = tweepy.Client(
@@ -42,16 +37,14 @@ def daily_tweet():
                 f"{days_elapsed_since_winning} days since England last regained the Ashes.\n"
                 f"{days_elapsed_since_holding} days since they held it.\n"
                 f"This was tweeted at {timestamp}.\n"
-                f"This was tweeted from the public account."
+               
                 
             )
         )
         print(f"Tweeted successfully!")
     except Exception as e:
         print(f"Error while tweeting: {e}")
-        print(API_KEY)
-        print(API_SECRET_KEY)
-
+    
 if __name__ == "__main__":
     try:
         user = client.get_me()
@@ -59,5 +52,4 @@ if __name__ == "__main__":
         daily_tweet()
     except Exception as e:
         print(f"Error: {e}")
-        print(API_KEY + "whats wrong.")
-        print(API_SECRET_KEY)
+        
