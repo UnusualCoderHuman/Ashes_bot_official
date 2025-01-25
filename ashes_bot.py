@@ -24,6 +24,8 @@ client = tweepy.Client(
 last_day_england_won_ashes = date(2015, 8, 8)  
 last_day_england_held_ashes = date(2017, 12, 18)  
 
+#twitter_account: https://x.com/englands_urn
+
 def daily_tweet():
     today = date.today()
     # Calculate the number to tweet based on days elapsed since start_date
